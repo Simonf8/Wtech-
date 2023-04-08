@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roles</title>
+</head>
+
+<body>
+    <h2>Roles</h2>
+    <ul>
+        {% for role in roles %}
+        <li>
+            <a href="{{ url_for('role_details', id=role.id) }}">{{ role.character_name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('new_role') }}">Add New Role</a>
+</body>
+
+</html>

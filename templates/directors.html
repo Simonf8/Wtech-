@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directors</title>
+</head>
+
+<body>
+    <h2>Directors</h2>
+    <ul>
+        {% for director in directors %}
+        <li>
+            <a href="{{ url_for('director_details', id=director.id) }}">{{ director.first_name }} {{ director.last_name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('new_director') }}">Add New Director</a>
+</body>
+
+</html>

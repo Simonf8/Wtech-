@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actors</title>
+</head>
+
+<body>
+    <h2>Actors</h2>
+    <ul>
+        {% for actor in actors %}
+        <li>
+            <a href="{{ url_for('actor_details', id=actor.id) }}">{{ actor.first_name }} {{ actor.last_name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('new_actor') }}">Add New Actor</a>
+</body>
+
+</html>
